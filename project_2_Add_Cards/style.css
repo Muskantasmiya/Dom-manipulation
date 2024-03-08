@@ -1,0 +1,39 @@
+.card{
+    background-color: pink;
+    height: 120px;
+    width: 100px;
+    font-size: 50px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 5px;
+
+}
+
+.heading{
+    background-color: #d88282;
+    height: 50;
+    display: inline;
+    
+}
+.container {
+    margin-top: 20px;
+    display: flex;
+    /* Use Flexbox to layout children in a row , or else it will go vertically(i.e in a column)*/
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.add-card{
+    cursor: pointer;
+    border-radius: 100%;
+    background-color: #65c5c9;
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+    height: 70px;
+    width: 70px;
+    
+}

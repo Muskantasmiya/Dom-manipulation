@@ -1,5 +1,6 @@
 let form = document.querySelector("#form");
 let submit = document.querySelector("#btn");
+let body = document.querySelector("#body");
 
 submit.addEventListener("click", function (e) {
   e.preventDefault();
@@ -24,6 +25,16 @@ body.insertBefore(ul, body.childNodes[5]);
 
 function displayData(obj) {
   const li = document.createElement("li");
+  const delbtn = document.createElement("button");
+  delbtn.textContent = "Delete";
+  delbtn.classList.add("delete");
+  delbtn.style.marginLeft = "10px";
+  delbtn.addEventListener("click", function () {
+    ul.removeChild(li);
+    localStorage.removeItem(obj.email);
+  });
+
   li.textContent = `${obj.username} - ${obj.email} - ${obj.phone}`;
+  li.appendChild(delbtn);
   ul.appendChild(li);
 }
